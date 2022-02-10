@@ -1,14 +1,13 @@
 ---
-- hosts: webservers
+- hosts: all
   become: yes
   tasks:
   - name: install the webserver on ubuntu 16
     apt:
-     name: appache2
+     name: git
      state: present
 
-
-  - name: start the web server on ubuntu 16
-    service:
-     name: appache2
-     state: started
+  - name: install the webserver on ubuntu 16
+    apt:
+     name: apache2 
+     state: present
