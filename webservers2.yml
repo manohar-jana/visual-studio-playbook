@@ -4,9 +4,15 @@
   tasks:
   - name: install the git on ubuntu 16
     apt:
-      name: git
+      name: apache2
       state: present
     when: ansible_os_family =="Debian"
+  - name: start the apache2 server
+    service:
+      name: apache2 
+      state: started
+    when: ansible_os_family =="Debian"
+    
   - name: install the httpd webserver on RedHat
     yum:
       name: httpd 
