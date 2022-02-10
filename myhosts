@@ -1,10 +1,5 @@
-[webservers]
+
 172.31.6.18
 172.31.29.36
 
-
-
-[webservers:vars]
-installpachagesonubuntu= apache2
-installpackagesonRedHat= httpd
 
