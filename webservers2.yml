@@ -2,7 +2,7 @@
 - hosts: all
   become: yes
   tasks:
-  - name: install the git on ubuntu 16
+  - name: install the appache2 on ubuntu 16
     apt:
       name: apache2
       state: present
