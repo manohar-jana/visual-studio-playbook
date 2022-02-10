@@ -7,8 +7,8 @@
       name: git
       state: present
     when: ansible_os_family =="Debian"
-  - name: install the apache2 webserver on ubuntu 16
-    apt:
-      name: apache2 
+  - name: install the httpd webserver on RedHat
+    yum:
+      name: httpd 
       state: present
     when: ansible_os_family =="RedHat"
