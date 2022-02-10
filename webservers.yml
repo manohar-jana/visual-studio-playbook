@@ -6,14 +6,12 @@
   - name: install the webserver on ubuntu 16
     apt:
      name: installpachagesonubuntu
-
      state: present
     when: ansible_os_family =="DEbian"
 
   - name: start the web server on ubuntu 16
     service:
      name: installpachagesonubuntu
-
      state: started
     when: ansible_os_family =="DEbian"
 
