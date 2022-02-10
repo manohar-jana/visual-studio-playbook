@@ -12,9 +12,9 @@
       name: apache2 
       state: started
     when: ansible_os_family =="Debian"
-    
+
   - name: install the httpd webserver on RedHat
     yum:
       name: httpd 
-      state: absent
+      state: started
     when: ansible_os_family =="RedHat"
