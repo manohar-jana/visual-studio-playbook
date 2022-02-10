@@ -2,3 +2,6 @@
 172.31.46.107
 172.31.28.162
 
+[webservers:vars]
+webpackonubuntu= apache2
+webpackageonRedHat= httpd
