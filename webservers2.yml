@@ -4,24 +4,24 @@
   tasks:
   - name: install the appache2 on ubuntu 16
     apt:
-      name: webpackonubuntu
+      name: "{{webpackonubuntu}}"
       state: present
     when: ansible_os_family =="Debian"
 
   - name: start the apache2 server
     service:
-      name: webpackonubuntu 
+      name: "{{webpackonubuntu}}"
       state: started
     when: ansible_os_family =="Debian"
 
   - name: install the httpd on RedHat
     yum:
-      name: webpackageonRedHat
+      name: "{{webpackageonRedHat}}"
       state: present
     when: ansible_os_family =="RedHat"
 
   - name: install the httpd webserver on RedHat
     service:
-      name: webpackageonRedHat 
+      name: "{{webpackageonRedHat}}"
       state: started
     when: ansible_os_family =="RedHat"
