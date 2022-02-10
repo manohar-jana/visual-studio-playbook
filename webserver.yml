@@ -5,25 +5,27 @@
   tasks:
   - name: install the webserver on ubuntu 16
     apt:
-     name: appache2
+     name: installpachagesonubuntu
+
      state: present
     when: ansible_os_family =="DEbian"
 
   - name: start the web server on ubuntu 16
     service:
-     name: appache2
+     name: installpachagesonubuntu
+
      state: started
     when: ansible_os_family =="DEbian"
-    
+
 
   - name: install the webser on RedHat nodes
     yum:
-     name: httpd
+     name: installpackagesonRedHat
      state: present
     when: ansible_os_family =="RedHat"
 
   - name: start the webserver on RedHat machines
     service:
-     name: httpd
+     name: installpackagesonRedHat
      state: started
     when: ansible_os_family =="RedHat"
