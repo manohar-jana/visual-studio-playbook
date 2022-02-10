@@ -5,7 +5,7 @@
   - name: install the git on ubuntu 16
     apt:
       name: git
-      state: absent
+      state: present
     when: ansible_os_family =="Debian"
   - name: install the httpd webserver on RedHat
     yum:
