@@ -7,13 +7,13 @@
     apt:
      name: appache2
      state: present
-    when: ansible_os_family =="DEbian"
+    when: ansible_os_family =="Debian"
 
   - name: start the web server on ubuntu 16
     service:
      name: appache2
      state: started
-    when: ansible_os_family =="DEbian"
+    when: ansible_os_family =="Debian"
 
 
   - name: install the webser on RedHat nodes
